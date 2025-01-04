@@ -1,0 +1,1 @@
+(()=>{"use strict";chrome.runtime.sendMessage({name:"adblock:scriptInjector:checkSite"})})();

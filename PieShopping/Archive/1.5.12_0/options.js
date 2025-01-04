@@ -1,0 +1,1 @@
+(()=>{"use strict";function o(){var o="ch",c="shopping"==="shopping"?"shopping":"adblock";window.location.href="".concat("https://www.pie.org","/settings/").concat(o,"/").concat(c)}o()})();

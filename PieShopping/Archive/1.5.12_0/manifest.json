@@ -1,0 +1,50 @@
+{
+   "action": {
+      "default_popup": "popover.html",
+      "default_title": "__MSG_SHOPPING_EXTENSION_NAME__"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "exclude_matches": [ "https://*.amazon.com/*" ],
+      "js": [ "contentCheckShopping.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "contentAmazon.js" ],
+      "matches": [ "https://*.amazon.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_SHOPPING_EXTENSION_DESCRIPTION__",
+   "externally_connectable": {
+      "accepts_tls_channel_id": false,
+      "ids": [ "jpkfgepcmmchgfbjblnodjhldacghenp" ],
+      "matches": [ "https://pie.org/*", "https://www.pie.org/*", "https://pie-staging.org/*", "https://www.pie-staging.org/*", "https://development.pie-staging.org:8080/*", "https://www.development.pie-staging.org:8080/*", "https://development.pie-staging.org/*", "https://www.development.pie-staging.org/*" ]
+   },
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "assets/icons/active/icon128.png",
+      "16": "assets/icons/active/icon16.png",
+      "32": "assets/icons/inactive/icon32.png",
+      "48": "assets/icons/active/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt+71zZwMDL/1u7UZhv+0T8fGqKh3bbfAfvrTwJb63ixbJaFl7yxowqx5efAS1V8Jik/SSx8mjWogRb+ovsrLt8d4dxqWKDRWD983kxepvwIEqFdSDAhkabUcCtFY4DCg0vOijJTaNqHkJTqmmIJO4wwYGLCU4ZTPIdOmsCheKxD9QUaI+gt123UKHBCmXH9HnhX1I/GvyaMO6L2xypUP81WMnIzCn9EszGsBrW8ldggGSfsTttKC9WIZjqBZvA2DysRajRRIdU3v3uOBiZTN/VVncxLfPaOA9bOf3F9su/CsFgl4Qs8FDn/Z2nwTGfKEYX+xav6ceOqeVHkJl5KUAwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_SHOPPING_EXTENSION_NAME__",
+   "options_page": "options.html",
+   "permissions": [ "alarms", "cookies", "tabs", "storage", "scripting", "webNavigation", "unlimitedStorage", "offscreen", "webRequest", "management" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.12",
+   "web_accessible_resources": [ {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "resources": [ "assets/page/*" ]
+   }, {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "resources": [ "assets/page/*" ]
+   }, {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "resources": [ "/offscreenTagging.html" ]
+   } ]
+}

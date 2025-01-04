@@ -1,0 +1,1 @@
+(()=>{"use strict";chrome.runtime.sendMessage({name:"shopping:scriptInjector:checkStore"}),window.onload=function(){chrome.runtime.sendMessage({name:"shopping:scriptInjector:checkShopifyStore"})}})();

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 22200001,
+    "action": {
+      "type": "allow"
+    },
+    "condition": {
+      "initiatorDomains": ["nymag.com"]
+    },
+    "priority": 1000
+  },
+  {
+    "id": 22200001,
+    "action": {
+      "type": "allowAllRequests"
+    },
+    "condition": {
+      "initiatorDomains": ["nymag.com"]
+    },
+    "priority": 1000
+  },
+]
